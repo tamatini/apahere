@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<title>   
+    {% block title %}
+        Propriétaire
+    {% endblock title %} 
+</title>
+{% block content %}
+<div class="container">
+    <div class="row pt-4 text-center">
+        <h3 class="col">Liste des propriétaires</h3>
+    </div>
+    <div class="row p-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Tél</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Mandat</th>
+                    <th scope="col">
+                        <a class="col" href="{% url 'create-owner' %}">Ajouter</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for owner in owners %}
+                <tr>
+                    <td scope="row">{{ owner.id }}</td>
+                    <td>{{ owner.nom }}</td>
+                    <td>{{ owner.prenom }}</td>
+                    <td>{{ owner.tel }}</td>
+                    <td>{{ owner.mail }}</td>
+                    <td>test</td>
+                    <td class="p-0">
+                        <div class="row m-0 p-0">
+                            <a class="col p-1 m-1 btn btn-primary" href="{% url 'detail-owner' owner.id %}">Voir</a>
+                            <a class="col p-1 m-1 btn btn-secondary" href="{% url 'update-owner' owner.id %}">Modifier</a>
+                            <form class="col p-0 m-0" action="{% url 'delete-owner' owner.id %}" method="POST">
+                                {% csrf_token %}
+                                <input class="m-1 btn btn-danger" type="submit" value="X">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+    

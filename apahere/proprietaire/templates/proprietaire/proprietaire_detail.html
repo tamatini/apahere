@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<title>
+    {% block title %}
+        {{ object.nom }} {{ object.prenom }}
+    {% endblock title %} 
+</title>
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center pt-4">
+        <h3 class="col-md-5 text-center">Détails propriétaire</h3>
+    </div>
+    <div class="container border p-1 my-1 bg-dark text-white">
+        <div class="row text-center justify-content-center">
+            <h5 class="col-md-4 p-2">Informations</h5>
+        </div>
+    </div>
+    <div class="container border p-4 mb-5">
+        <div class="row">
+            <div class="col-md-3">
+                <b>Nom:</b> {{ object.nom }}
+            </div>
+            <div class="col-md-3">
+                <b>Prénom:</b> {{ object.prenom }}
+            </div>
+            <div class="col-md-3">
+                <b>Vini:</b> {{ object.tel }}
+            </div>
+            <div class="col-md-3">
+                <b>Mail:</b> {{ object.mail }}
+            </div>
+        </div>
+    </div>
+    <div class="container border p-1 mb-1 bg-dark text-white">
+        <div class="row text-center justify-content-center">
+            <h5 class="col-md-4 p-2">Liste des biens</h5>
+        </div>
+    </div>
+    <div class="container border p-4">
+        <div class="row pt-4">
+            <table class="table">
+                <thead class="bg-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Référence</th>
+                        <th>Situation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</div>
+
+
+
+{% endblock content %}
+    

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<title>
+    
+    {% block title %}
+        Nouveau produit
+    {% endblock title %}
+        
+</title>
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            <h3 class="p-3 col-md">Nouveau bien immobilier</h3>
+        </div>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-left p-3 border rounded-lg shadow">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            {{ form.type_de_bien.error }}
+                            {{ form.type_de_bien|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.operation.error }}
+                            {{ form.operation|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            {{ form.chambre.error }}
+                            {{ form.chambre|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4">
+                            {{ form.sdb.error }}
+                            {{ form.sdb|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4">
+                            {{ form.toilette.error }}
+                            {{ form.toilette|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            {{ form.cuisine.error }}
+                            {{ form.cuisine|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.meuble.error }}
+                            {{ form.meuble|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            {{ form.garage.error }}
+                            {{ form.garage|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.parking.error }}
+                            {{ form.parking|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            {{ form.superficie_salon.error }}
+                            {{ form.superficie_salon|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.superficie_habitat.error }}
+                            {{ form.superficie_habitat|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            {{ form.superficie_terrain.error }}
+                            {{ form.superficie_terrain|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.proprietaire.error }}
+                            {{ form.proprietaire|as_crispy_field }}
+                        </div>
+                    </div>         
+                    <a href="{% url 'produits' %}" class="btn btn-secondary float-right ml-2">Annuler</a>        
+                    <button type="submit" class="btn btn-primary float-right">Nouveau</button>  
+                </form>
+            </div>
+        </div>  
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,4 @@
+.idea
+.vscode
+VENV/
+apahere/db.sqlite3

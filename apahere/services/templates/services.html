@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Nos services
+{% endblock title %}
+{% block content %}
+<div class="bg-light">
+    <div class="container">
+        <div class="row text-center m-4 p-2">
+            <h1 class="col-12 pb-0 mb-0 text-success">Agence immobilière Suzanne Apahere</h1>
+            <span class="col-12 text-muted">Expert en immobilier depuis plus de 30 ans</span>
+        </div>
+        <div class="text-center">
+            <img class="col-3" src="{% static 'img/logo-web.png' %}">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 m-2 p-4 text-justify">
+                <p>L’agence Apahere est à votre écoute au centre-ville de Papeete pour vous accompagner et vous conseiller dans vos recherches, votre vente et l’ensemble de vos besoins en immobilier. Plus qu’une simple agence immobilière, l’agence Apahere vous propose de nombreux services basés sur nos années d’expérience et sur une équipe spécialement recrutée pour son professionnalisme.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-warning m-0">
+        <div class="row" id="calculator-box">
+            <div class="col-6 p-0 m-0">
+                <img class="img-fluid" src="{% static 'img/calculator.jpg' %}" id="calculator">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <h2 class="col mt-5 mb-4 text-center text-success">Estimation de votre bien immobilier</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        <p class="text-justify mx-5">Faites vos demandes d’estimation auprès de notre agence immobilière qui travaille en Polynésie française depuis plus de 30 ans.</p>
+                        <p class="text-justify mx-5">Cette expérience sur le territoire polynésien est un atout majeur et qui permet à notre équipe de vous donner une estimation réelle à prix juste pour convaincre les acheteurs/locataires potentiels.</p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <button class="btn btn-success btn-lg mx-5 p-2 my-4 rounded-0">Estimer votre bien</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="calculator-box">
+            <div class="col">
+                <div class="row">
+                    <h2 class="col m-5 text-center text-success">Gestion locative de votre bien immobilier</h2>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                            <p class="text-center">Pour toute recherche d’accompagnement en gestion locative, vous pouvez contacter notre équipe pour vous aider à gérer votre bien immobilier. </p>
+                            <p class="text-center">Notre équipe s’occupe entièrement de la gestion administrative de votre bien immobilier.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-warning btn-lg mx-5 p-2 my-4 rounded-0">Publier votre bien</button>
+                    </div>
+                </div>
+            </div>   
+        </div>       
+    </div>
+    <div class="container-fluid m-0 bg-warning bg-warning">
+        <div class="row" id="calculator-box">
+            <div class="col-6 m-0 p-0">
+                <div class="row">
+                    <h2 class="col mt-5 mb-4 text-center text-success">Publication de votre bien</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        <p class="text-justify mx-3">Vous pouvez proposer votre bien au sein de notre agence immobilière afin d’être visible auprès de nombreux clients.</p>
+                        <p class="text-justify mx-3">Pour cela, il vous suffit de remplir un formulaire dans lequel vous renseignerez au maximum les critères sur votre bien. (Vente/location, maison/appartement, le prix etc)</p>    
+                        <p class="text-justify mx-3">Plus il y aura d’information concernant votre bien immobilier, plus les locataires/acheteurs pourront se projeter.</p> 
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <button class="btn btn-success btn-lg mx-5 p-2 my-4 rounded-0">Publier votre bien</button>
+                </div>
+            </div>
+            <div class="col-6 p-0 m-0">
+                <img class="img-fluid" src="{% static 'img/laptop.jpg' %}" id="laptop">
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}
+    

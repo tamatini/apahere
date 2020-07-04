@@ -1,0 +1,28 @@
+#logo {
+    width: 4rem;
+}
+
+#carouselId {
+    height: 40rem;
+    overflow: hidden;
+}
+
+#carouselId img {
+    width: 100%;
+    overflow: hidden;
+}
+
+#calculator {
+    width: 100%;
+    height: auto;
+}
+
+#laptop {
+    width: 100%;
+    height: auto;
+}
+
+#calculator-box {
+    height: 25rem;
+    overflow: hidden;
+}

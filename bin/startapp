@@ -1,0 +1,6 @@
+#!/bin/sh
+ROOT=$(dirname $0)/..
+PYTHON=$ROOT/VENV/bin/python3
+DJANGO=$ROOT/apahere/manage.py
+$PYTHON $DJANGO runserver 0.0.0.0:8000
+exit $?
